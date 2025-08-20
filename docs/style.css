@@ -1,0 +1,9 @@
+body { font-family: ui-sans-serif, system-ui; margin: 20px; }
+header h1 { margin: 0 0 8px; }
+.controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.controls label { display: inline-flex; gap: 6px; align-items: center; }
+.io { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+textarea { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.panel { min-height: 110px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; background: #fafafa; overflow: auto; }
+.badge { display:inline-block; padding:2px 6px; border-radius:999px; border:1px solid #ccc; margin:2px; }
+.step { opacity: 0.85; }
