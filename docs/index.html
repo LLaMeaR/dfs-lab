@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DFS Visualizer</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <header>
+    <h1>DFS Visualizer</h1>
+    <p>정점/간선을 입력하고 DFS 실행(재귀/반복, 자동/스텝) 과정을 눈으로 확인하세요.</p>
+  </header>
+
+  <section class="controls">
+    <label>Vertices <input id="vertexCount" type="number" min="1" value="6"/></label>
+    <label>Directed <input id="directed" type="checkbox"/></label>
+    <label>Start <input id="start" type="number" min="0" value="0"/></label>
+    <label>Mode
+      <select id="mode">
+        <option value="recursive">Recursive</option>
+        <option value="iterative">Iterative (stack)</option>
+      </select>
+    </label>
+    <label>Speed
+      <input id="speed" type="range" min="50" max="1200" value="300"/>
+      <span id="speedOut">300ms</span>
+    </label>
+    <button id="runBtn">Run</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="stepBtn">Step</button>
+    <button id="resetBtn">Reset</button>
+  </section>
+
+  <section class="io">
+    <div>
+      <h3>Edges (u v, line-separated)</h3>
+      <textarea id="edges" rows="8">0 1
+0 2
+1 3
+1 4
+2 4
+3 5</textarea>
+    </div>
+    <div>
+      <h3>Order</h3>
+      <div id="order" class="panel"></div>
+      <h3>Call Stack / Stack</h3>
+      <div id="stack" class="panel"></div>
+      <h3>Trace</h3>
+      <div id="trace" class="panel"></div>
+    </div>
+  </section>
+
+  <script src="./main.js"></script>
+</body>
+</html>
