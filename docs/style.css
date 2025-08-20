@@ -1,9 +1,26 @@
+/* Base */
 body { font-family: ui-sans-serif, system-ui; margin: 20px; }
 header h1 { margin: 0 0 8px; }
+.panel { border: 1px solid #ddd; border-radius: 8px; padding: 8px; background: #fafafa; overflow: auto; }
+.panel.small { min-height: 120px; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid #ccc; margin-left:8px; }
+
+/* Tabs */
+.tabs { display: flex; gap: 8px; margin: 12px 0; }
+.tab-btn { padding: 6px 12px; border: 1px solid #ccc; background: #fff; border-radius: 8px; cursor: pointer; }
+.tab-btn.active { background: #eef; border-color: #99f; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Visualizer layout */
 .controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
 .controls label { display: inline-flex; gap: 6px; align-items: center; }
 .io { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 textarea { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-.panel { min-height: 110px; border: 1px solid #ddd; border-radius: 8px; padding: 8px; background: #fafafa; overflow: auto; }
-.badge { display:inline-block; padding:2px 6px; border-radius:999px; border:1px solid #ccc; margin:2px; }
-.step { opacity: 0.85; }
+
+/* Problem layout */
+.problem-controls { display:flex; gap:12px; align-items:center; margin-bottom: 10px; }
+.problem-body { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
+.problem-left .answer-area { display:flex; gap:10px; align-items:center; margin-top: 10px; }
+.problem-left label { display:inline-flex; gap:6px; align-items:center; }
+.gridbox.hidden { display:none; }
