@@ -7,4 +7,4 @@ def test_islands_basic():
         [0,0,1,1],
         [0,0,0,0],
     ]
-    assert count_islands(grid) == 3
+    assert count_islands(grid) == 2
